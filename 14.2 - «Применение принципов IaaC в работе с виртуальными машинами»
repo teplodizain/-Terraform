@@ -65,6 +65,7 @@
 
 ### Ответ
 
+
 ```
 savchenko@debian:~$ vagrant -v
 Vagrant 2.3.4
