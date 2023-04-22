@@ -62,6 +62,14 @@
 
 - [VirtualBox](https://www.virtualbox.org/),
 - [Vagrant](https://github.com/netology-code/devops-materials),
+
+### Ответ
+
+```
+savchenko@debian:~$ vagrant -v
+Vagrant 2.3.4
+```
+
 - [Terraform](https://github.com/netology-code/devops-materials/blob/master/README.md),
 - Ansible.
 
