@@ -71,6 +71,11 @@ savchenko@debian:~$ vagrant -v
 Vagrant 2.3.4
 ```
 
+```
+xxx@NextCloud:~$ vagrant -v
+Vagrant 2.2.19
+```
+
 - [Terraform](https://github.com/netology-code/devops-materials/blob/master/README.md),
 - Ansible.
 
