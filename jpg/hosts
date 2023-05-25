@@ -1,0 +1,14 @@
+[nodes:children]
+manager
+worker
+
+[manager]
+158.160.103.14 ansible_user=ubuntu
+158.160.107.213 ansible_user=ubuntu
+51.250.69.157 ansible_user=ubuntu
+
+[worker]
+158.160.109.213 ansible_user=ubuntu
+158.160.97.240 ansible_user=ubuntu
+158.160.105.14 ansible_user=ubuntu
+
