@@ -21,7 +21,20 @@
 ![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.3.png)
 
 3. Воспользуйтесь подготовленным (используется `docker`) или создайте собственное окружение для проведения дальнейших испытаний.
+
+### Ответ
+
+```
+sudo docker run -dit --name centos7 pycontribs/centos:7 sleep 6000000
+sudo docker run -dit --name ubuntu pycontribs/ubuntu:latest sleep 6000000
+
+```
 4. Проведите запуск playbook на окружении из `prod.yml`. Зафиксируйте полученные значения `some_fact` для каждого из `managed host`.
+
+### Ответ
+
+![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.4.png)
+
 5. Добавьте факты в `group_vars` каждой из групп хостов так, чтобы для `some_fact` получились значения: для `deb` — `deb default fact`, для `el` — `el default fact`.
 6.  Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
