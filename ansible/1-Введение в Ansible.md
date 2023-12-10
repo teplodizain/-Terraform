@@ -62,8 +62,23 @@ sudo docker run -dit --name ubuntu pycontribs/ubuntu:latest sleep 6000000
 ![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.8.png)
 
 9. Посмотрите при помощи `ansible-doc` список плагинов для подключения. Выберите подходящий для работы на `control node`.
+
+### Ответ
+
+![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.9.png)
+
 10. В `prod.yml` добавьте новую группу хостов с именем  `local`, в ней разместите localhost с необходимым типом подключения.
+
+### Ответ
+
+![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.10.png)
+
 11. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь, что факты `some_fact` для каждого из хостов определены из верных `group_vars`.
+
+### Ответ
+
+![](https://github.com/teplodizain/-Terraform/blob/main/ansible/jpg/ansible_1.1.11.png)
+
 12. Заполните `README.md` ответами на вопросы. Сделайте `git push` в ветку `master`. В ответе отправьте ссылку на ваш открытый репозиторий с изменённым `playbook` и заполненным `README.md`.
 13. Предоставьте скриншоты результатов запуска команд.
 
