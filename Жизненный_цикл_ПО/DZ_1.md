@@ -21,6 +21,8 @@
    
 ![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/1.png)
 
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/2.png)
+
 Остальные задачи должны проходить по упрощённому workflow:
 
 1. Open -> On develop.
@@ -29,11 +31,19 @@
 4. On test -> On develop, Done.
 5. Done -> Closed, Open.
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/2.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/3.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/4.png)
 **Что нужно сделать**
 
-1. Создайте задачу с типом bug, попытайтесь провести его по всему workflow до Done. 
-1. Создайте задачу с типом epic, к ней привяжите несколько задач с типом task, проведите их по всему workflow до Done. 
+1. Создайте задачу с типом bug, попытайтесь провести его по всему workflow до Done.
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/5.png)
+   
+1. Создайте задачу с типом epic, к ней привяжите несколько задач с типом task, проведите их по всему workflow до Done.
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/6.png)
+   
 1. При проведении обеих задач по статусам используйте kanban. 
 1. Верните задачи в статус Open.
 1. Перейдите в Scrum, запланируйте новый спринт, состоящий из задач эпика и одного бага, стартуйте спринт, проведите задачи до состояния Closed. Закройте спринт.
