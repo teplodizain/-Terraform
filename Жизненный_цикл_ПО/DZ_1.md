@@ -18,7 +18,9 @@
 5. Done fix -> On test.
 6. On test -> On fix, Done.
 7. Done -> Closed, Open.
-![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/1.md)
+   
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/1.png)
+
 Остальные задачи должны проходить по упрощённому workflow:
 
 1. Open -> On develop.
@@ -27,6 +29,7 @@
 4. On test -> On develop, Done.
 5. Done -> Closed, Open.
 
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/2.png)
 **Что нужно сделать**
 
 1. Создайте задачу с типом bug, попытайтесь провести его по всему workflow до Done. 
