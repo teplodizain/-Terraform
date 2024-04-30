@@ -18,7 +18,7 @@
 5. Done fix -> On test.
 6. On test -> On fix, Done.
 7. Done -> Closed, Open.
-
+![](https://github.com/teplodizain/-Terraform/blob/main/Жизненный_цикл_ПО/1/1.md)
 Остальные задачи должны проходить по упрощённому workflow:
 
 1. Open -> On develop.
