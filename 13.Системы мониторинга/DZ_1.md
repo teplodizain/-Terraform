@@ -118,9 +118,7 @@ P.S.: если при запуске некоторые контейнеры б�
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_01.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_01.png)
-
-![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_01.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_02.png)
 
 #
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
