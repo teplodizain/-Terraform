@@ -115,6 +115,11 @@ pull:
 
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим `Z`, например
 `./data:/var/lib:Z`
+
+![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_02.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/monitoring_01.png)
+
 #
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
         
