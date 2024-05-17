@@ -80,7 +80,7 @@ sum by(device) (node_filesystem_avail_bytes{fstype!="tmpfs"})
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 1. В качестве решения задания приведите листинг этого файла.
 
-![json-содержимое Dashboard](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/2/14_dz_grafana.json)
+[json-содержимое Dashboard](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/2/14_dz_grafana.json)
 
 ---
 
