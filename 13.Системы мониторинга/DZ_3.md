@@ -50,6 +50,9 @@ Filebeat следует сконфигурировать для отправки
 ![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-03.png)
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-02.png)
+
+Добрый день, при запуске docker compose запускается 5 контейнеров, затем один падает.
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
