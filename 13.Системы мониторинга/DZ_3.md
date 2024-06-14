@@ -47,11 +47,15 @@ Filebeat следует сконфигурировать для отправки
 
 ### Ответ
 
-![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-03.png)
+- скриншот `docker ps` через 5 минут после старта всех контейнеров (их должно быть 5);
+  
+![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-04.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-02.png)
+- скриншот интерфейса kibana;
+  
+![](https://github.com/teplodizain/-Terraform/blob/main/13.Системы%20мониторинга/images/3/DZ-3-05.png)
 
-!!! Добрый день, при запуске docker compose запускается 5 контейнеров, затем один падает.
+
 
 ## Задание 2
 
