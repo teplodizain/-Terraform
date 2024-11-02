@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multitool-backend
+spec:
+  selector:
+    matchLabels:
+      app: nmt
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nmt
+    spec:
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool
+        env:
+        - name: HTTP_PORT
+          value: "1180"
+        ports:
+        - containerPort: 1180
+          name: mt-http
