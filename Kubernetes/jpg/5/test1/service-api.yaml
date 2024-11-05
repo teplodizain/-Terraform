@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-api-svc
+#  namespace: dz4
+spec:
+  selector:
+    app: api
+  ports:
+    - protocol: TCP
+      name: nginx
+      port: 9001
+      targetPort: 80 
+#  type: LoadBalancer
