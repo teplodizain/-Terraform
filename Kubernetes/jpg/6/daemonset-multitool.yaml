@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: multitool-dz6
+spec:
+  selector:
+    matchLabels:
+      name: multitool-dz6
+  template:
+    metadata:
+      labels:
+        name: multitool-dz6
+    spec:
+      volumes:
+      - name: host
+        hostPath:
+          path: /var/log # на устройстве
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool
+        args:
+          - /bin/sh
+          - -c 
+          - sleep infinity
+        volumeMounts:
+          - name: host
+            mountPath: /test/dz6 # в поде
