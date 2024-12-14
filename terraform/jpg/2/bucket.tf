@@ -5,7 +5,7 @@ resource "yandex_iam_service_account" "sa" {
 
 // Назначение роли сервисному аккаунту
 resource "yandex_resourcemanager_folder_iam_member" "sa-admin" {
-  folder_id = "b1gs8gks9evl3v7ufrrl"
+  folder_id = ""
   role      = "storage.admin"
   member    = "serviceAccount:${yandex_iam_service_account.sa.id}"
 }
