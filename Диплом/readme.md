@@ -98,7 +98,15 @@ savchenko@savchenko:~/terraform/diplom/3/kub/kubespray$ ansible-playbook -i inve
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/2.1.png)
 
+```
+root@node-0:/home/ubuntu#  kubectl get nodes
+```
+
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/2.2.png)
+
+```
+root@node-0:/home/ubuntu# kubectl get pods --all-namespaces
+```
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/2.3.png)
 
@@ -121,6 +129,14 @@ savchenko@savchenko:~/terraform/diplom/3/kub/kubespray$ ansible-playbook -i inve
 1. Git репозиторий с тестовым приложением и Dockerfile.
 2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
 
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/3.1.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/3.2.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/3.3.png)
+
+
 ---
 ### Подготовка cистемы мониторинга и деплой приложения
 
@@ -141,6 +157,19 @@ savchenko@savchenko:~/terraform/diplom/3/kub/kubespray$ ansible-playbook -i inve
 2. Http доступ на 80 порту к web интерфейсу grafana.
 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
 4. Http доступ на 80 порту к тестовому приложению.
+
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.1.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.2.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.3.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.4.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.5.png)
+
+
 ---
 ### Установка и настройка CI/CD
 
