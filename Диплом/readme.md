@@ -82,6 +82,19 @@
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
 
+Склонировал репозиторий:
+
+```
+git clone https://github.com/kubernetes-sigs/kubespray.git
+```
+
+При создании инфраструктуры создал hosts.yaml
+
+Работоспособный Kubernetes кластер.
+
+```
+savchenko@savchenko:~/terraform/diplom/3/kub/kubespray$ ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b
+```
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/2.1.png)
 
