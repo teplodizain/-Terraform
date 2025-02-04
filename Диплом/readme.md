@@ -169,7 +169,30 @@ root@node-0:/home/ubuntu# kubectl get pods --all-namespaces
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.5.png)
 
+```
+root@node-0:/home/ubuntu# kubectl edit svc stable-kube-prometheus-sta-prometheus -n monitoring
+service/stable-kube-prometheus-sta-prometheus edited
+root@node-0:/home/ubuntu# kubectl edit svc stable-grafana -n monitoring
+service/stable-grafana edited
 
+root@node-0:/home/ubuntu# kubectl get svc -n monitoring
+NAME                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP      111m
+prometheus-operated                       ClusterIP   None            <none>        9090/TCP                        111m
+stable-grafana                            NodePort    10.233.34.70    <none>        80:31235/TCP                    111m
+stable-kube-prometheus-sta-alertmanager   ClusterIP   10.233.8.23     <none>        9093/TCP,8080/TCP               111m
+stable-kube-prometheus-sta-operator       ClusterIP   10.233.59.133   <none>        443/TCP                         111m
+stable-kube-prometheus-sta-prometheus     NodePort    10.233.30.206   <none>        9090:32483/TCP,8080:30766/TCP   111m
+stable-kube-state-metrics                 ClusterIP   10.233.14.66    <none>        8080/TCP                        111m
+stable-prometheus-node-exporter           ClusterIP   10.233.57.94    <none>        9100/TCP                        111m
+root@node-0:/home/ubuntu#
+```
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.1.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.2.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.3.png)
 ---
 ### Установка и настройка CI/CD
 
