@@ -58,6 +58,7 @@
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/1.4.png)
 
+[манифест облачной ифраструктуры](https://github.com/teplodizain/-Terraform/tree/main/Диплом/diplom/terraform)
 
 
 ---
