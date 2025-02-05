@@ -193,6 +193,31 @@ root@node-0:/home/ubuntu#
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.2.png)
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.3.png)
+
+Hазвёртываю тестовоуе приложение на Kubernetes кластере.
+
+```
+ubuntu@node-0:~/syte$ sudo kubectl apply -f deployment.yaml -n syte
+deployment.apps/syte-app created
+ubuntu@node-0:~/syte$ kubectl apply -f service.yaml -n syte
+error: error validating "service.yaml": error validating data: failed to download openapi: Get "http://localhost:8080/openapi/v2?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
+ubuntu@node-0:~/syte$ sudo kubectl apply -f service.yaml -n syte
+service/syte-service created
+ubuntu@node-0:~/syte$ sudo kubectl get pods -n syte
+NAME                       READY   STATUS    RESTARTS   AGE
+syte-app-57786dd45-587fn   1/1     Running   0          35s
+syte-app-57786dd45-fldkj   1/1     Running   0          35s
+ubuntu@node-0:~/syte$ 
+```
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.4.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.4.png)
+
+[манифест deployment.yaml]()
+
+[манифест service.yaml]()
+
 ---
 ### Установка и настройка CI/CD
 
