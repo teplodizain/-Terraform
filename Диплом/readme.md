@@ -214,9 +214,9 @@ ubuntu@node-0:~/syte$
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.5.png)
 
-[манифест deployment.yaml]()
+[манифест deployment.yaml](https://github.com/teplodizain/-Terraform/blob/main/Диплом/diplom/syte/deployment.yaml)
 
-[манифест service.yaml]()
+[манифест service.yaml](https://github.com/teplodizain/-Terraform/blob/main/Диплом/diplom/syte/service.yaml)
 
 ---
 ### Установка и настройка CI/CD
