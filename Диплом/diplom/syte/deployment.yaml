@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syte-app
+  namespace: syte
+  labels:
+    app: web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+        - name: diplom-test-syte
+          image: teplodizain/savchenko-test-container:0.1
+          resources:
+            requests:
+              cpu: "1"
+              memory: "200Mi"
+            limits:
+              cpu: "2"
+              memory: "400Mi"
+          ports:
+            - containerPort: 80
