@@ -212,7 +212,7 @@ ubuntu@node-0:~/syte$
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.4.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.4.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/5.5.png)
 
 [манифест deployment.yaml]()
 
