@@ -245,6 +245,12 @@ ubuntu@node-0:~/syte$
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.4.png)
 
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.5.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.6.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.7.png)
+
 ---
 ## Что необходимо для сдачи задания?
 
