@@ -237,6 +237,14 @@ ubuntu@node-0:~/syte$
 2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.
 
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.1.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.2.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.3.png)
+
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.4.png)
+
 ---
 ## Что необходимо для сдачи задания?
 
