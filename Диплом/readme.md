@@ -241,16 +241,30 @@ ubuntu@node-0:~/syte$
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.2.png)
 
+```
+kubectl create ns gitlab-runner
+kubectl --namespace=diplom-gitlab-runner create secret generic runner-secret --from-literal=runner-registration-token=<token> --from-literal=runner-token=""
+```
+
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.3.png)
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.4.png)
 
+```
+helm repo add gitlab https://charts.gitlab.io
+helm install gitlab-runner gitlab/gitlab-runner -n gitlab-runner -f helm-runner/values.yaml
+```
+
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.5.png)
+
+```
+helm list -n diplom-gitlab-runner
+kubectl -n diplom-gitlab-runner get pods
+```
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.6.png)
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.7.png)
-
 ---
 ## Что необходимо для сдачи задания?
 
