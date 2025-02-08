@@ -162,6 +162,95 @@ root@node-0:/home/ubuntu# kubectl get pods --all-namespaces
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.1.png)
 
+```
+root@node-0:/home/ubuntu# curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+root@node-0:/home/ubuntu# chmod 700 get_helm.sh
+root@node-0:/home/ubuntu# ./get_helm.sh
+[WARNING] Could not find git. It is required for plugin installation.
+Downloading https://get.helm.sh/helm-v3.17.0-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+root@node-0:/home/ubuntu# kubectl create namespace monitoring
+namespace/monitoring created
+root@node-0:/home/ubuntu# sudo helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" has been added to your repositories
+root@node-0:/home/ubuntu# sudo helm install stable prometheus-community/kube-prometheus-stack --namespace=monitoring
+NAME: stable
+LAST DEPLOYED: Sat Feb  8 10:16:27 2025
+NAMESPACE: monitoring
+STATUS: deployed
+REVISION: 1
+NOTES:
+kube-prometheus-stack has been installed. Check its status by running:
+  kubectl --namespace monitoring get pods -l "release=stable"
+
+Get Grafana 'admin' user password by running:
+
+  kubectl --namespace monitoring get secrets stable-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+
+Access Grafana local instance:
+
+  export POD_NAME=$(kubectl --namespace monitoring get pod -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=stable" -oname)
+  kubectl --namespace monitoring port-forward $POD_NAME 3000
+
+Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+root@node-0:/home/ubuntu# kubectl get all -n monitoring
+NAME                                                         READY   STATUS    RESTARTS   AGE
+pod/alertmanager-stable-kube-prometheus-sta-alertmanager-0   2/2     Running   0          5m49s
+pod/prometheus-stable-kube-prometheus-sta-prometheus-0       2/2     Running   0          5m49s
+pod/stable-grafana-759db9fdc-6gkqb                           3/3     Running   0          5m57s
+pod/stable-kube-prometheus-sta-operator-fc4959669-z5hg7      1/1     Running   0          5m57s
+pod/stable-kube-state-metrics-79db954df-s9wxg                1/1     Running   0          5m57s
+pod/stable-prometheus-node-exporter-54tc4                    1/1     Running   0          5m57s
+pod/stable-prometheus-node-exporter-8cwr8                    1/1     Running   0          5m57s
+pod/stable-prometheus-node-exporter-knsg7                    1/1     Running   0          5m57s
+
+NAME                                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+service/alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP      5m49s
+service/prometheus-operated                       ClusterIP   None            <none>        9090/TCP                        5m49s
+service/stable-grafana                            ClusterIP   10.233.47.31    <none>        80/TCP                          5m57s
+service/stable-kube-prometheus-sta-alertmanager   ClusterIP   10.233.9.158    <none>        9093/TCP,8080/TCP               5m57s
+service/stable-kube-prometheus-sta-operator       ClusterIP   10.233.41.35    <none>        443/TCP                         5m57s
+service/stable-kube-prometheus-sta-prometheus     NodePort    10.233.44.130   <none>        9090:31853/TCP,8080:31416/TCP   5m57s
+service/stable-kube-state-metrics                 ClusterIP   10.233.21.250   <none>        8080/TCP                        5m57s
+service/stable-prometheus-node-exporter           ClusterIP   10.233.25.228   <none>        9100/TCP                        5m57s
+
+NAME                                             DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/stable-prometheus-node-exporter   3         3         3       3            3           kubernetes.io/os=linux   5m57s
+
+NAME                                                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/stable-grafana                        1/1     1            1           5m57s
+deployment.apps/stable-kube-prometheus-sta-operator   1/1     1            1           5m57s
+deployment.apps/stable-kube-state-metrics             1/1     1            1           5m57s
+
+NAME                                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/stable-grafana-759db9fdc                        1         1         1       5m57s
+replicaset.apps/stable-kube-prometheus-sta-operator-fc4959669   1         1         1       5m57s
+replicaset.apps/stable-kube-state-metrics-79db954df             1         1         1       5m57s
+
+NAME                                                                    READY   AGE
+statefulset.apps/alertmanager-stable-kube-prometheus-sta-alertmanager   1/1     5m49s
+statefulset.apps/prometheus-stable-kube-prometheus-sta-prometheus       1/1     5m49s
+root@node-0:/home/ubuntu# kubectl edit svc stable-kube-prometheus-sta-prometheus -n monitoring
+
+[2]+  Stopped                 kubectl edit svc stable-kube-prometheus-sta-prometheus -n monitoring
+root@node-0:/home/ubuntu# kubectl edit svc stable-grafana -n monitoring
+service/stable-grafana edited
+root@node-0:/home/ubuntu# kubectl get svc -n monitoring
+NAME                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP      6m54s
+prometheus-operated                       ClusterIP   None            <none>        9090/TCP                        6m54s
+stable-grafana                            NodePort    10.233.47.31    <none>        80:31605/TCP                    7m2s
+stable-kube-prometheus-sta-alertmanager   ClusterIP   10.233.9.158    <none>        9093/TCP,8080/TCP               7m2s
+stable-kube-prometheus-sta-operator       ClusterIP   10.233.41.35    <none>        443/TCP                         7m2s
+stable-kube-prometheus-sta-prometheus     NodePort    10.233.44.130   <none>        9090:31853/TCP,8080:31416/TCP   7m2s
+stable-kube-state-metrics                 ClusterIP   10.233.21.250   <none>        8080/TCP                        7m2s
+stable-prometheus-node-exporter           ClusterIP   10.233.25.228   <none>        9100/TCP                        7m2s
+
+```
+
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.2.png)
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/4.3.png)
