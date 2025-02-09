@@ -336,6 +336,8 @@ ubuntu@node-0:~/syte$
 
 ![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.5.png)
 
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.6.png)
+
 [Манифест диплом](https://github.com/teplodizain/diplom2)
 
 ---
