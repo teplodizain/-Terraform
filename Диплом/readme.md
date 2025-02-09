@@ -326,34 +326,18 @@ ubuntu@node-0:~/syte$
 2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.1.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.1.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.2.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.2.png)
 
-```
-kubectl create ns gitlab-runner
-kubectl --namespace=diplom-gitlab-runner create secret generic runner-secret --from-literal=runner-registration-token=<token> --from-literal=runner-token=""
-```
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.3.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.3.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.4.png)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.4.png)
+![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/7.5.png)
 
-```
-helm repo add gitlab https://charts.gitlab.io
-helm install gitlab-runner gitlab/gitlab-runner -n gitlab-runner -f helm-runner/values.yaml
-```
+[Манифест диплом](https://github.com/teplodizain/diplom2)
 
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.5.png)
-
-```
-helm list -n diplom-gitlab-runner
-kubectl -n diplom-gitlab-runner get pods
-```
-
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.6.png)
-
-![](https://github.com/teplodizain/-Terraform/blob/main/Диплом/jpg/6.7.png)
 ---
 ## Что необходимо для сдачи задания?
 
